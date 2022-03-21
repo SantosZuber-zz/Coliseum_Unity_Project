@@ -1,0 +1,6 @@
+Movimiento: WASD
+Golpear: Click Izquierdo
+Dropear item: Q
+Saltar: Espacio
+Izq Control: Deslizarse por el suelo
+Agarrar item: Pararse sobre el

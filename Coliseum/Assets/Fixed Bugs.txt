@@ -1,0 +1,3 @@
+------BUGS YA CORREGIDOS------
+-Mejora de animaciones
+-El enemigo se hundia en el suelo

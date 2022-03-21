@@ -1,0 +1,32 @@
+------Bugs a corregir----------
+
+-El enemigo sigue pegando por mas que este inmovilizado en el suelo (al ser empujado).
+-El jugador corre sin parar involuntariamente
+
+
+------Cosas a implementar----------
+
+--Corto plazo:--
+-Mejorar mucho el sistema de combate.
+-Intentar mejorar las animaciones (mejor timing).
+-Mejorar el sistema de drop, incluir un numero random pequeno que se sume al transform de donde a aparecen.
+-Arreglar bug de que axe y wand traspasan el suelo
+
+--Largo plazo--
+
+-Incluir mas niveles con distintos enemigos distintos que sean cada vez mas fuertes y dificiles de ganar.
+-Implementar buenos sonidos a las siguientes acciones:
+
+-Golpear
+-Ser golpeado
+-Tener poca vida
+-Matar
+-Morir
+-UI
+
+-Terminar el escenario completo
+
+
+--COMPLETADOS--
+-Remplazar el empujar por pegar
+-Creacion de inventario
