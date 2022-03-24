@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy1 : Enemy
 {
@@ -12,6 +13,10 @@ public class Enemy1 : Enemy
     private bool animHittedDurationRunning;
     private float timerMaterialChange;
     private bool timerMaterialChangeRunning;
+    void Awake()
+    {
+        EnemyStats.health = 40;
+    }
     void Start()
     {
         Anim.SetBool("lowHealth", false);

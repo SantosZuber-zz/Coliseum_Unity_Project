@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Inventario : MonoBehaviour
 {
+    [SerializeField] private UnityEvent GrabMace;
+    [SerializeField] private UnityEvent GrabAxe;
+    [SerializeField] private UnityEvent GrabWand;
+
     [SerializeField] List<GameObject> Inventory;
     [SerializeField] GameObject[] armas;
     [SerializeField] GameObject[] objetos;
@@ -35,6 +39,7 @@ public class Inventario : MonoBehaviour
     {
         if (mace == true && index == false && (axe == false && wand == false))
         {
+            GrabMace?.Invoke();
             Inventory.Add(armas[0]);
             Debug.Log("Mace anadido");
             index = true;
@@ -53,6 +58,7 @@ public class Inventario : MonoBehaviour
     {
         if (axe == true && index1 == false && (mace == false && wand == false))
         {
+            GrabAxe?.Invoke();
             Inventory.Add(armas[1]);
             Debug.Log("Axe anadido");
             index1 = true;
@@ -71,6 +77,7 @@ public class Inventario : MonoBehaviour
     {
         if (wand == true && index2 == false && (axe == false && mace == false))
         {
+            GrabWand?.Invoke();
             Inventory.Add(armas[2]);
             Debug.Log("Wand anadido");
             index2 = true;

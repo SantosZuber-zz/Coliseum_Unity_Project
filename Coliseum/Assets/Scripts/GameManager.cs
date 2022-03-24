@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         pause = false;
+
         /*
             if (instance == null)
             {

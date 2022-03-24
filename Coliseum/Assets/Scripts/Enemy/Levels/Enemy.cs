@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Animator Anim;
     [SerializeField] protected Transform Ground;
     [SerializeField] protected float lookSpeed = 1.7f;
-    
     protected bool alive = true;
+    EnemyEvent enemyEvent = new EnemyEvent();
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemyEvent.onDeath += Death;
     }
 
     // Update is called once per frame
@@ -53,6 +54,8 @@ public class Enemy : MonoBehaviour
         if (EnemyStats.health <= 0)
         {
             alive = false;
+            enemyEvent.OnDeath();
+            Debug.Log("Evento onDeath, llamado por Enemy y lo recibio el Enemy1");
             Anim.SetBool("death", true);
             Destroy(gameObject, 3f);
         }

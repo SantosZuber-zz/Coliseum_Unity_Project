@@ -7,9 +7,11 @@ public class Dropmain : MonoBehaviour
     [SerializeField] private GameObject[] armas;
     private float timer;
     private bool canSpawn = false;
+    GameEvent gameEvent = new GameEvent();
+
     void Start()
     {
-
+        gameEvent.onDrop += SpawnearArma;
     }
 
     void Update()
@@ -17,7 +19,7 @@ public class Dropmain : MonoBehaviour
         if (canSpawn == false)
         {
             timer = timer + 1f * Time.deltaTime;
-            if (timer >= 10f)
+            if (timer >= 7f)
             {
                 canSpawn = true;
                 timer = 0f;
@@ -25,7 +27,8 @@ public class Dropmain : MonoBehaviour
         }
         if (canSpawn)
         {
-            SpawnearArma();
+            gameEvent.OnDrop();
+            Debug.Log("Evento onDrop, llamado por Dropmain y lo recibio --DROP ARMAS--");
             canSpawn = false;
         }
     }
